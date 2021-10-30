@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+/* common styles */
+
+.text__white {
+  color:#fff
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container__row {
+  display:flex !important;
+  flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.justify--between {
+  justify-content: space-between;
+}
+
+.display__fluid {
+  width: 100%;
+  height: 100vh !important;
+  padding: 0px !important;
+  max-width: 100% !important;
+  margin: 0px !important;
+  overflow: hidden;
+}
+
+.inline--block {
+  display: inline-block
+}
+
+.color__black {
+  background-color: #000;
+}
+
+.color__grey {
+  background-color: rgb(36, 36, 36);
+}
+
+.color__greyer {
+  background-color: rgb(17, 17, 17);
+}
+.menu--button {
+  display:none
+}
+.css-1hyl1h2{
+  background-color: #272727 !important;
+}
+.css-1v4ccyo:hover .MuiOutlinedInput-notchedOutline, .css-igs3ac{
+  border-color: rgb(110, 110, 110) !important;
+  color: rgb(110, 110, 110) !important;
+}
+.css-1x5jdmq {
+  color: rgb(110, 110, 110) !important;
+}
+.css-1mdgboq-MuiButtonBase-root-MuiButton-root, .css-13y1x71 {
+  position: absolute !important;
+  right: 2% !important;
+}
+.css-zw3mfo-MuiModal-root-MuiDialog-root, .css-126xj0f {
+  z-index: 1502 !important;
+}
+.css-79ws1d-MuiModal-root, .css-8ndowl{
+  z-index: 1503 !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .mobile--view__false{
+    display: none !important;
+  }
+  .css-1wnsr1i, .css-1ut85dj{
+    width: 84vw !important;
+    padding:6vw !important;
+  }
+  .contact--list__slider{
+    position: fixed;
+    height:100vh;
+    left:-100vw;
+    z-index: 1499;
+    width:100vw;
+    animation: close 0.8s !important;
+  }
+  .enter--message{
+    margin:0px 0px 30px 20px!important;
+    position: fixed;
+    width: 95vw;
+    bottom: 0px;
+    background-color: #000;
+  }
+  .message--title {
+    margin: 70px 0px 0px 20px !important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+  }
+  .menu--icon{
+    top:20px !important;
+    right:20px !important;
+  }
+  .message--sent{
+    margin-right: 20px !important;
+  }
+  .message--received {
+    margin-left: 20px !important;
+  }
+  .menu--button {
+    display:inline;
+    position: fixed;
+    z-index:1501;
+    top:20px;
+    left:20px
+  }
+  .contact--title { 
+    margin-top: 15% !important;
+  }
+  .contact--head{
+    margin-bottom: 0px !important;
+  }
+  .css-6b3s0t-MuiTypography-root, .css-1olgqbd{
+    font-size: 80% !important;
+  }
+  .css-uol6xi-MuiTypography-root, .css-ggk11p{
+    display: none !important;
+  }
+  .css-h4y409-MuiList-root, .css-1ontqvh {
+    margin: 0px !important;
+    margin-top: 5% !important;
+  }
+  .css-1p823my-MuiListItem-root, .css-1yo8bqd {
+    display: block !important;
+    width: 100vw !important;
+    align-content: center;
+    text-align: center;
+  }
+  .css-cveggr-MuiListItemIcon-root, .css-1f8bwsm{
+    width: 100vw !important;
+    display: flex !important;
+    justify-content:center;
+    margin: 20px 0px
+  }
+  .Connect\(ContactList\)-root-1 .css-1p823my-MuiListItem-root, .css-1yo8bqd {
+    padding-top: 7% !important;
+  }
+  .contact--list__close {
+    position: fixed;
+    z-index: 1499;
+    height:100vh;
+    width:100vw;
+    left:0vw;
+    animation: show 0.8s !important;
+  }
+  @keyframes show {
+    from {
+      left: -100vw
+    }
+    top {left :0vw}
+  }
+  @keyframes close {
+    from {
+      left: 0vw
+    }
+    top {left :-100vw}
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 992px) and (orientation: landscape)  {
+  body{
+    display:none;
   }
-  to {
-    transform: rotate(360deg);
+  html {
+    background: url("https://image.shutterstock.com/image-vector/vector-linear-icon-rotate-tablet-260nw-295939001.jpg");
+    background-repeat: no-repeat;
+    background-position:top;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .mobile--view__false{
+    display: none
+  }
+  .contact--list__slider{
+    position: fixed;
+    height:100vh;
+    left:-100vw;
+    z-index: 1499;
+    width:100vw;
+    animation: close 0.8s !important;
+  }
+  .enter--message{
+    margin:0px 0px 30px 40px!important;
+    position: fixed;
+    width: 95vw;
+    bottom: 0px;
+    background-color: #000;
+  }
+  .message--title {
+    margin: 40px 0px 0px 40px !important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+  }
+  .menu--icon{
+    top:30px !important;
+    right:30px !important;
+  }
+  .message--sent{
+    margin-right: 40px !important;
+  }
+  .message--received {
+    margin-left: 40px !important;
+  }
+  .menu--button {
+    display:inline;
+    position: fixed;
+    z-index:1501;
+    top:20px;
+    left:20px
+  }
+  .contact--title { 
+    margin-top: 15% !important;
+  }
+  .contact--head{
+    margin-bottom: 0px !important;
+  }
+  .css-6b3s0t-MuiTypography-root{
+    font-size: 100% !important;
+  }
+  .css-1ufxv2r-MuiFormControl-root-MuiTextField-root{
+    width: 70% !important;
+  }
+  .css-uol6xi-MuiTypography-root{
+    display: none !important;
+  }
+  .css-h4y409-MuiList-root {
+    margin: 0px !important;
+    margin-top: 5% !important;
+  }
+  .css-cveggr-MuiListItemIcon-root{
+    display: flex !important;
+    justify-content:center;
+  }
+  .Connect\(ContactList\)-root-1 .css-1p823my-MuiListItem-root {
+    padding-top: 5%;
+  }
+  .contact--list__close {
+    position: fixed;
+    z-index: 1499;
+    height:100vh;
+    width:100vw;
+    left:0vw;
+    animation: show 0.8s !important;
+  }
+  @keyframes show {
+    from {
+      left: -100vw
+    }
+    top {left :0vw}
+  }
+  @keyframes close {
+    from {
+      left: 0vw
+    }
+    top {left :-100vw}
   }
 }
