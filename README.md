@@ -3,7 +3,7 @@
 You can view the live project using this url [https://chatapp-61dd6.web.app/](https://chatapp-61dd6.web.app/)
 The above link will be 100% functional, no mock data is used.
 
-For a better use case, use default login and chat with user Elon Musk.
+For a better use case, use default login(Vinoth Thomas)  and chat with user Elon Musk.
 
 Or setup in local
 
@@ -34,7 +34,7 @@ The entire application is designed as a Single Page Application, by default "mvt
 
 You can pick any user available in the left section of the application (for mobile view, use the arrow icon button to see the list) and start the chat.
 
-For a better use case, use default login and chat with user Elon Musk.
+For a better use case, use default login(Vinoth Thomas) and chat with user Elon Musk.
 
 The logged in user information is also stored in localStorage with which we can start the session from the data where user left off on the previous session.
 
