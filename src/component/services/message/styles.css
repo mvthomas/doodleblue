@@ -67,6 +67,11 @@
     text-align: left;
 }
 
+.message--box .message--text{
+    text-align:left !important;
+}
+
+
 .enter--message {
     margin: 50px;
     margin-top: 0px;

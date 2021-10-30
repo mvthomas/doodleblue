@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Setting Up the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can view the live project using this url [https://chatapp-61dd6.web.app/](https://chatapp-61dd6.web.app/)
+The above link will be 100% functional, no mock data is used.
 
-## Available Scripts
+For a better use case, use default login and chat with user Elon Musk.
 
-In the project directory, you can run:
+Or setup in local
+
+1. Clone the repo from [https://github.com/mvthomas/doodleblue](https://github.com/mvthomas/doodleblue)
+2. cd doodleblue && npm install
+3. open [http://localhost:3000/](http://localhost:3000/)
+
+## Overview and Stacks used
+
+The Chat application is capable of create, edit, read and delete the user throughout the application on realtime.
+
+Logged in user can send a text to any other user available in the user database, and the message will be sent and received on a real time basis and get scrolled to the newly avaialbe chat automatically.
+
+User can switch between any user on a single button click on the login button avalable on the user management screen.
+
+The stack used for the development in React, Redux, Material UI on client side, Firebsae FireStore and hosting on the server side.
+
+## Documentation
+
+In the project directory, you can run: (if local) or use the live link to view the application.
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The entire application is designed as a Single Page Application, by default "mvthomas121@gmail.com" user will be logged in, and it willl be switched once user makes any login attempt.
 
-### `npm test`
+You can pick any user available in the left section of the application (for mobile view, use the arrow icon button to see the list) and start the chat.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For a better use case, use default login and chat with user Elon Musk.
 
-### `npm run build`
+The logged in user information is also stored in localStorage with which we can start the session from the data where user left off on the previous session.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The logged in users information, the current user we are chatting with and the messages that are shared will be managed in the redux store using their repsective reducers in the redux directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+All the network requests are managed under networks directory except the message service as it will built with onSnapshot function to listen for every new messages and update the view accordingly.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+APIs Used:
+1. Create/Update user using setDoc method.
+2. Delete user uding deleteDoc method.
+3. onSnaptshot to listen for active changes in the messages collection using the document id.

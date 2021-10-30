@@ -60,6 +60,12 @@
 .css-79ws1d-MuiModal-root, .css-8ndowl{
   z-index: 1503 !important;
 }
+.enter--message{
+  margin:0px 0px 30px 20px!important;
+  position: fixed;
+  width: 70vw;
+  bottom: 0px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -83,7 +89,6 @@
     position: fixed;
     width: 95vw;
     bottom: 0px;
-    background-color: #000;
   }
   .message--title {
     margin: 70px 0px 0px 20px !important;
@@ -192,7 +197,6 @@
     position: fixed;
     width: 95vw;
     bottom: 0px;
-    background-color: #000;
   }
   .message--title {
     margin: 40px 0px 0px 40px !important;

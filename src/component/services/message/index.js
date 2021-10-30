@@ -88,10 +88,13 @@ function Messages(props) {
                 renderMessages(messages)
             }
         </div>
-        <div className="enter--message">
-            <TextField sx={{width:"70%"}} onChange={(e)=>onInput(e.target.value)} value={input} className={classes.root} />
-            <Button onClick={()=>onMessage()} sx={{margin:"7px"}} variant="contained" color="success" size="large">{"Send"}</Button>
-        </div>
+        {
+            chat&&chat.email&&
+            <div className="enter--message">
+                <TextField sx={{width:"70%"}} onChange={(e)=>onInput(e.target.value)} value={input} className={classes.root} />
+                <Button onClick={()=>onMessage()} sx={{margin:"7px"}} variant="contained" color="success" size="large">{"Send"}</Button>
+            </div>
+        }
     </div>
     )
 }

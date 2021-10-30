@@ -67,7 +67,7 @@ class ContactList extends Component {
     getUser=async()=>{
         let contactsList = await getDB("uid")
         let email = this.props.user.email
-        contactsList = contactsList.filter(check)    // Returns [32, 33, 40]
+        contactsList = contactsList.filter(check)
         function check(item) {
             return item.email != email;
         }
@@ -81,9 +81,14 @@ class ContactList extends Component {
     }
 
     deleteUser_=async(email)=>{
-        await deleteUser(email)
-        this.getUser()
-        this.showAlert({show:true, title:"Deleted user!!"})
+        if(email!="mvthomas121@gmail.com"){
+            await deleteUser(email)
+            this.getUser()
+            this.showAlert({show:true, title:"Deleted user!!"})
+        } else {
+            alert("Don't delete this user, as this is the Admin users id")
+        }
+        
     }
 
     editUser=async(item)=>{
@@ -213,6 +218,8 @@ class ContactList extends Component {
         await this.props.setCurrentUser(item)
         await localStorage.setItem("user", JSON.stringify(item))
         this.getUser()
+        await this.props.setMessage({texts:[]})
+        await this.props.setCurrentChat({name:false, email:false})
         this.showAlert({show:true, title:`Logged in as ${item.email}`})
     }
 
